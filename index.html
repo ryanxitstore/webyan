@@ -1,0 +1,2806 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#08050d">
+
+<title>RYAN NEWERA — Buy Key Game</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root{
+    --bg:#07050b;
+    --bg-soft:#0b0810;
+    --card:#100b16;
+    --card2:#150e1d;
+    --border:#281a34;
+    --border2:#392448;
+    --text:#f8f4fc;
+    --muted:#8e8398;
+    --purple:#a04cff;
+    --purple-dark:#7023d9;
+    --purple-light:#c27cff;
+    --green:#36e78a;
+    --red:#ff5964;
+    --yellow:#ffc857;
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    overflow-x:hidden;
+    color:var(--text);
+    background:
+        radial-gradient(
+            circle at 50% -10%,
+            rgba(137,50,255,.20),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 100% 30%,
+            rgba(104,42,200,.08),
+            transparent 30%
+        ),
+        var(--bg);
+    font-family:"DM Sans",sans-serif;
+}
+
+button,
+input,
+select{
+    font:inherit;
+}
+
+button{
+    cursor:pointer;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+.container{
+    width:min(1180px,calc(100% - 28px));
+    margin:auto;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:100;
+    height:70px;
+    background:rgba(7,5,11,.86);
+    border-bottom:1px solid rgba(255,255,255,.055);
+    backdrop-filter:blur(18px);
+}
+
+.nav{
+    height:100%;
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-right:auto;
+    font-family:"Space Grotesk";
+    font-weight:800;
+    font-size:15px;
+    letter-spacing:.3px;
+}
+
+.logo{
+    width:36px;
+    height:36px;
+    display:grid;
+    place-items:center;
+    position:relative;
+    overflow:hidden;
+    border-radius:11px;
+    background:
+        linear-gradient(
+            145deg,
+            #c47bff,
+            #7427e5
+        );
+    box-shadow:
+        0 0 30px rgba(150,65,255,.30);
+}
+
+.logo::before{
+    content:"";
+    position:absolute;
+    width:17px;
+    height:17px;
+    border:2px solid white;
+    border-radius:6px;
+    transform:rotate(45deg);
+}
+
+.logo::after{
+    content:"RN";
+    position:relative;
+    z-index:2;
+    font-size:8px;
+    font-weight:900;
+    color:white;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    color:#bcb2c6;
+    font-size:11px;
+    font-weight:600;
+}
+
+.nav-links a{
+    transition:.2s;
+}
+
+.nav-links a:hover{
+    color:white;
+}
+
+.nav-actions{
+    display:flex;
+    gap:7px;
+}
+
+.btn{
+    border:1px solid var(--border2);
+    border-radius:9px;
+    background:#120d18;
+    color:#fff;
+    padding:10px 14px;
+    font-size:10px;
+    font-weight:800;
+    transition:.2s;
+}
+
+.btn:hover{
+    transform:translateY(-1px);
+    border-color:#694486;
+}
+
+.btn-primary{
+    border-color:transparent;
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple),
+            var(--purple-dark)
+        );
+    box-shadow:
+        0 8px 25px rgba(137,45,235,.22);
+}
+
+.mobile-menu-btn{
+    display:none;
+    width:38px;
+    height:38px;
+    border:1px solid var(--border);
+    border-radius:10px;
+    background:#120d18;
+    color:white;
+    font-size:20px;
+}
+
+.mobile-menu{
+    display:none;
+    position:absolute;
+    left:12px;
+    right:12px;
+    top:65px;
+    padding:10px;
+    border:1px solid var(--border);
+    border-radius:14px;
+    background:#100b16;
+    box-shadow:0 20px 50px rgba(0,0,0,.45);
+}
+
+.mobile-menu.active{
+    display:block;
+}
+
+.mobile-menu a{
+    display:block;
+    padding:12px;
+    border-radius:9px;
+    color:#bcb2c6;
+    font-size:11px;
+}
+
+.mobile-menu a:hover{
+    background:#191120;
+    color:white;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    position:relative;
+    padding:72px 0 40px;
+    text-align:center;
+    overflow:hidden;
+}
+
+.hero-glow{
+    position:absolute;
+    width:440px;
+    height:440px;
+    left:50%;
+    top:-290px;
+    transform:translateX(-50%);
+    border-radius:50%;
+    background:rgba(139,45,255,.25);
+    filter:blur(80px);
+    pointer-events:none;
+}
+
+.status{
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:7px 12px;
+    border:1px solid #234b35;
+    border-radius:999px;
+    background:#09130d;
+    color:#71dfa0;
+    font-size:9px;
+    font-weight:800;
+}
+
+.status-dot{
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:var(--green);
+    box-shadow:0 0 12px var(--green);
+}
+
+.hero h1{
+    position:relative;
+    margin:21px auto 14px;
+    max-width:800px;
+    font-family:"Space Grotesk";
+    font-size:clamp(43px,7vw,76px);
+    line-height:.94;
+    letter-spacing:-3px;
+}
+
+.gradient{
+    color:transparent;
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff 5%,
+            #d38eff 42%,
+            #8738ff 100%
+        );
+    -webkit-background-clip:text;
+    background-clip:text;
+}
+
+.hero p{
+    position:relative;
+    max-width:620px;
+    margin:auto;
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.8;
+}
+
+.hero-buttons{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    gap:8px;
+    margin-top:24px;
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:8px;
+    margin:28px 0 48px;
+}
+
+.feature{
+    padding:16px 10px;
+    text-align:center;
+    border:1px solid var(--border);
+    border-radius:13px;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(24,16,31,.85),
+            rgba(12,8,16,.95)
+        );
+}
+
+.feature-icon{
+    font-size:17px;
+    margin-bottom:6px;
+}
+
+.feature strong{
+    display:block;
+    font-size:9px;
+    margin-bottom:4px;
+}
+
+.feature span{
+    color:#766b80;
+    font-size:8px;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.section{
+    padding:28px 0;
+}
+
+.section-label{
+    color:#a967ff;
+    font-size:9px;
+    letter-spacing:2px;
+    font-weight:800;
+    text-transform:uppercase;
+}
+
+.section-title{
+    margin:5px 0 18px;
+    font-family:"Space Grotesk";
+    font-size:28px;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-row{
+    display:flex;
+    gap:8px;
+    margin-bottom:9px;
+}
+
+.search-wrap{
+    position:relative;
+    flex:1;
+}
+
+.search-input{
+    width:100%;
+    height:45px;
+    padding:0 42px 0 14px;
+    outline:none;
+    border:1px solid var(--border);
+    border-radius:11px;
+    background:#0d0912;
+    color:white;
+    font-size:11px;
+}
+
+.search-input:focus{
+    border-color:#72428d;
+}
+
+.search-icon{
+    position:absolute;
+    right:14px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#766b80;
+}
+
+.clear-search{
+    display:none;
+    position:absolute;
+    right:38px;
+    top:50%;
+    transform:translateY(-50%);
+    border:0;
+    background:none;
+    color:#8d8297;
+}
+
+.sort-select{
+    width:145px;
+    height:45px;
+    padding:0 10px;
+    outline:none;
+    border:1px solid var(--border);
+    border-radius:11px;
+    background:#0d0912;
+    color:white;
+    font-size:10px;
+}
+
+/* =========================
+   CATEGORIES
+========================= */
+
+.categories{
+    display:flex;
+    gap:7px;
+    overflow:auto;
+    scrollbar-width:none;
+}
+
+.categories::-webkit-scrollbar{
+    display:none;
+}
+
+.category-btn{
+    white-space:nowrap;
+    padding:9px 14px;
+    border:1px solid var(--border);
+    border-radius:999px;
+    background:#0d0912;
+    color:#8f8499;
+    font-size:9px;
+    font-weight:800;
+}
+
+.category-btn.active{
+    color:white;
+    border-color:#974cff;
+    background:#7929e5;
+}
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    margin-top:15px;
+}
+
+.product{
+    overflow:hidden;
+    border:1px solid var(--border);
+    border-radius:16px;
+    background:
+        linear-gradient(
+            180deg,
+            #15101b,
+            #0d0912
+        );
+    transition:.22s ease;
+}
+
+.product:hover{
+    transform:translateY(-4px);
+    border-color:#523467;
+    box-shadow:0 15px 40px rgba(0,0,0,.2);
+}
+
+.product-image{
+    height:150px;
+    position:relative;
+    display:grid;
+    place-items:center;
+    overflow:hidden;
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(158,77,255,.24),
+            transparent 60%
+        ),
+        #0b0810;
+    border-bottom:1px solid var(--border);
+}
+
+.product-image::before{
+    content:"";
+    position:absolute;
+    width:75px;
+    height:75px;
+    border-radius:22px;
+    transform:rotate(8deg);
+    background:
+        linear-gradient(
+            145deg,
+            #c67eff,
+            #6820dc
+        );
+    box-shadow:
+        0 0 55px rgba(157,77,255,.32);
+}
+
+.product-image::after{
+    content:"";
+    position:absolute;
+    width:105px;
+    height:105px;
+    border:1px solid rgba(180,120,255,.16);
+    border-radius:30px;
+    transform:rotate(35deg);
+}
+
+.product-initial{
+    position:relative;
+    z-index:2;
+    font-family:"Space Grotesk";
+    font-size:19px;
+    font-weight:800;
+    color:white;
+}
+
+.platform-badge{
+    position:absolute;
+    z-index:3;
+    top:9px;
+    left:9px;
+    padding:5px 7px;
+    border-radius:6px;
+    background:rgba(7,5,11,.78);
+    border:1px solid rgba(255,255,255,.08);
+    color:#b8a8c5;
+    font-size:7px;
+    font-weight:800;
+}
+
+.status-badge{
+    position:absolute;
+    z-index:3;
+    top:9px;
+    right:9px;
+    font-size:7px;
+    font-weight:800;
+}
+
+.status-online{
+    color:#67e19b;
+}
+
+.status-offline{
+    color:#ff7078;
+}
+
+.status-unknown{
+    color:#c0b5c7;
+}
+
+.product-body{
+    padding:13px;
+}
+
+.product-name{
+    margin-bottom:7px;
+    font-size:12px;
+    font-weight:800;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.product-meta{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:9px;
+    color:#766b80;
+    font-size:8px;
+}
+
+.product-price{
+    margin-bottom:11px;
+    font-family:"Space Grotesk";
+    font-size:16px;
+    font-weight:800;
+}
+
+.product-price small{
+    color:#6d6277;
+    font-family:"DM Sans";
+    font-size:8px;
+    font-weight:500;
+}
+
+.buy-btn{
+    width:100%;
+    padding:10px;
+    border:0;
+    border-radius:9px;
+    background:
+        linear-gradient(
+            135deg,
+            #a04cff,
+            #7024d9
+        );
+    color:white;
+    font-size:9px;
+    font-weight:800;
+    transition:.2s;
+}
+
+.buy-btn:hover{
+    box-shadow:0 0 22px rgba(157,77,255,.3);
+}
+
+/* =========================
+   EMPTY
+========================= */
+
+.empty{
+    grid-column:1/-1;
+    padding:55px 20px;
+    border:1px dashed #33243f;
+    border-radius:16px;
+    text-align:center;
+    color:#786d81;
+}
+
+.empty-icon{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+.empty strong{
+    display:block;
+    color:#bcb0c5;
+    font-size:12px;
+}
+
+.empty span{
+    font-size:9px;
+}
+
+/* =========================
+   LEADERBOARD
+========================= */
+
+.leader-grid{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    gap:12px;
+}
+
+.leader-intro,
+.leader-list{
+    border:1px solid var(--border);
+    border-radius:17px;
+    background:
+        linear-gradient(
+            180deg,
+            #120d18,
+            #0c0810
+        );
+}
+
+.leader-intro{
+    padding:22px;
+}
+
+.leader-intro h3{
+    margin:6px 0 8px;
+    font-family:"Space Grotesk";
+    font-size:24px;
+}
+
+.leader-intro p{
+    color:var(--muted);
+    font-size:10px;
+    line-height:1.8;
+}
+
+.leader-list{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+    padding:10px;
+}
+
+.leader-item{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    min-width:0;
+    padding:10px;
+    border:1px solid #211729;
+    border-radius:12px;
+    background:#0c0910;
+}
+
+.rank{
+    width:23px;
+    color:#8e8198;
+    font-family:"Space Grotesk";
+    font-size:9px;
+    font-weight:800;
+}
+
+.avatar{
+    width:34px;
+    height:34px;
+    flex:none;
+    display:grid;
+    place-items:center;
+    border-radius:10px;
+    background:
+        linear-gradient(
+            135deg,
+            #6d27b5,
+            #b66cff
+        );
+    font-size:8px;
+    font-weight:900;
+}
+
+.leader-info{
+    min-width:0;
+    flex:1;
+}
+
+.leader-info strong{
+    display:block;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    font-size:10px;
+}
+
+.leader-info span{
+    color:#6f6478;
+    font-size:8px;
+}
+
+.leader-total{
+    color:#b985e7;
+    font-size:8px;
+    font-weight:800;
+}
+
+/* =========================
+   INFO
+========================= */
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:9px;
+}
+
+.info-card{
+    padding:17px;
+    border:1px solid var(--border);
+    border-radius:14px;
+    background:#0e0a13;
+}
+
+.info-number{
+    margin-bottom:9px;
+    color:#a967ff;
+    font-family:"Space Grotesk";
+    font-size:17px;
+    font-weight:800;
+}
+
+.info-card strong{
+    display:block;
+    margin-bottom:5px;
+    font-size:10px;
+}
+
+.info-card span{
+    color:#776c80;
+    font-size:8px;
+    line-height:1.6;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    margin-top:45px;
+    padding:42px 0 90px;
+    border-top:1px solid var(--border);
+    background:#09070d;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.6fr 1fr 1fr 1fr;
+    gap:25px;
+}
+
+.footer-description{
+    margin-top:10px;
+    max-width:280px;
+    color:#766b80;
+    font-size:9px;
+    line-height:1.8;
+}
+
+.footer-title{
+    margin-bottom:10px;
+    font-size:9px;
+    font-weight:800;
+}
+
+.footer-links a{
+    display:block;
+    margin-bottom:6px;
+    color:#766b80;
+    font-size:9px;
+}
+
+.footer-links a:hover{
+    color:white;
+}
+
+.copyright{
+    margin-top:25px;
+    padding-top:17px;
+    border-top:1px solid var(--border);
+    color:#574e5d;
+    font-size:8px;
+}
+
+/* =========================
+   FLOATING CONTACT
+========================= */
+
+.floating-contact{
+    position:fixed;
+    z-index:90;
+    right:16px;
+    bottom:16px;
+    width:52px;
+    height:52px;
+    display:grid;
+    place-items:center;
+    border:1px solid #3a2748;
+    border-radius:16px;
+    background:#150e1d;
+    box-shadow:0 15px 45px rgba(0,0,0,.45);
+    color:white;
+    font-size:9px;
+    font-weight:900;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal-backdrop{
+    position:fixed;
+    inset:0;
+    z-index:200;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:14px;
+    background:rgba(0,0,0,.76);
+    backdrop-filter:blur(8px);
+}
+
+.modal-backdrop.show{
+    display:flex;
+}
+
+.modal{
+    width:min(500px,100%);
+    max-height:90vh;
+    overflow:auto;
+    border:1px solid #382448;
+    border-radius:19px;
+    background:#0e0a13;
+    box-shadow:0 30px 90px rgba(0,0,0,.6);
+    animation:modalShow .18s ease;
+}
+
+@keyframes modalShow{
+    from{
+        opacity:0;
+        transform:translateY(14px) scale(.98);
+    }
+
+    to{
+        opacity:1;
+        transform:none;
+    }
+}
+
+.modal-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:16px 18px;
+    border-bottom:1px solid var(--border);
+}
+
+.modal-title{
+    font-size:13px;
+    font-weight:800;
+}
+
+.modal-close{
+    width:32px;
+    height:32px;
+    border:0;
+    border-radius:9px;
+    background:#18111f;
+    color:white;
+    font-size:19px;
+}
+
+.modal-body{
+    padding:18px;
+}
+
+/* SELECTED PRODUCT */
+
+.selected{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:17px;
+    padding:12px;
+    border:1px solid var(--border);
+    border-radius:13px;
+    background:#0b080f;
+}
+
+.selected-icon{
+    width:50px;
+    height:50px;
+    display:grid;
+    place-items:center;
+    flex:none;
+    border-radius:13px;
+    background:
+        linear-gradient(
+            145deg,
+            #c17aff,
+            #7023d9
+        );
+    font-family:"Space Grotesk";
+    font-size:12px;
+    font-weight:900;
+}
+
+.selected-info{
+    min-width:0;
+}
+
+.selected-name{
+    margin-bottom:4px;
+    font-size:13px;
+    font-weight:800;
+}
+
+.selected-meta{
+    color:#776c81;
+    font-size:8px;
+}
+
+.modal-label{
+    margin-bottom:9px;
+    color:#b7acbe;
+    font-size:10px;
+    font-weight:800;
+}
+
+.duration{
+    width:100%;
+    position:relative;
+    padding:14px;
+    text-align:left;
+    border:1px solid #8d47ce;
+    border-radius:12px;
+    background:rgba(145,64,230,.13);
+    color:white;
+}
+
+.duration::after{
+    content:"✓";
+    position:absolute;
+    right:13px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#c48aff;
+    font-weight:900;
+}
+
+.duration strong{
+    display:block;
+    margin-bottom:4px;
+    font-size:12px;
+}
+
+.duration-price{
+    display:block;
+    color:#c18aff;
+    font-family:"Space Grotesk";
+    font-size:15px;
+    font-weight:800;
+}
+
+.duration-desc{
+    display:block;
+    margin-top:4px;
+    color:#71667a;
+    font-size:8px;
+}
+
+.whatsapp-order{
+    width:100%;
+    margin-top:12px;
+    padding:13px;
+    border:0;
+    border-radius:10px;
+    background:
+        linear-gradient(
+            135deg,
+            #a04cff,
+            #7023d9
+        );
+    color:white;
+    font-size:10px;
+    font-weight:800;
+}
+
+.modal-note{
+    margin-top:10px;
+    color:#6e6378;
+    font-size:8px;
+    line-height:1.6;
+    text-align:center;
+}
+
+/* =========================
+   TOAST
+========================= */
+
+.toast{
+    position:fixed;
+    left:50%;
+    bottom:24px;
+    z-index:300;
+    transform:translate(-50%,20px);
+    opacity:0;
+    pointer-events:none;
+    padding:11px 15px;
+    border-radius:11px;
+    background:#f8f3fb;
+    color:#130b1a;
+    font-size:9px;
+    font-weight:800;
+    transition:.25s;
+}
+
+.toast.show{
+    opacity:1;
+    transform:translate(-50%,0);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1100px){
+
+    .products{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+@media(max-width:850px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .nav-actions{
+        display:none;
+    }
+
+    .mobile-menu-btn{
+        display:block;
+    }
+
+    .features{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .leader-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .container{
+        width:calc(100% - 20px);
+    }
+
+    .navbar{
+        height:64px;
+    }
+
+    .hero{
+        padding:51px 0 32px;
+    }
+
+    .hero h1{
+        font-size:42px;
+        letter-spacing:-2.2px;
+    }
+
+    .hero p{
+        font-size:10px;
+    }
+
+    .hero-buttons .btn{
+        padding:10px 12px;
+    }
+
+    .features{
+        grid-template-columns:repeat(2,1fr);
+        margin-bottom:35px;
+    }
+
+    .search-row{
+        display:block;
+    }
+
+    .sort-select{
+        width:100%;
+        margin-top:8px;
+    }
+
+    .products{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:8px;
+    }
+
+    .product-image{
+        height:125px;
+    }
+
+    .product-body{
+        padding:10px;
+    }
+
+    .product-name{
+        font-size:10px;
+    }
+
+    .product-price{
+        font-size:13px;
+    }
+
+    .buy-btn{
+        padding:9px;
+    }
+
+    .leader-list{
+        grid-template-columns:1fr;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+        gap:20px 15px;
+    }
+
+}
+
+@media(max-width:375px){
+
+    .hero h1{
+        font-size:37px;
+    }
+
+    .products{
+        gap:7px;
+    }
+
+    .product-image{
+        height:112px;
+    }
+
+    .product-price{
+        font-size:12px;
+    }
+
+    .floating-contact{
+        width:47px;
+        height:47px;
+        right:12px;
+        bottom:12px;
+    }
+
+}
+
+/* REDUCED MOTION */
+
+@media(prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+        scroll-behavior:auto!important;
+        animation:none!important;
+        transition:none!important;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header class="navbar">
+
+    <div class="container nav">
+
+        <a href="#" class="brand">
+            <span class="logo"></span>
+            RYAN NEWERA
+        </a>
+
+        <nav class="nav-links">
+            <a href="#produk">Produk</a>
+            <a href="#leaderboard">Leaderboard</a>
+            <a href="#cara-beli">Cara Beli</a>
+            <a href="#bantuan">Bantuan</a>
+            <a href="#reseller">Reseller</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="btn"
+                onclick="showToast('Fitur login dapat dihubungkan ke backend.')">
+                MASUK
+            </button>
+
+            <button class="btn btn-primary"
+                onclick="showToast('Fitur pendaftaran dapat dihubungkan ke backend.')">
+                DAFTAR
+            </button>
+        </div>
+
+        <button
+            class="mobile-menu-btn"
+            onclick="toggleMobileMenu()">
+            ☰
+        </button>
+
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu">
+
+        <a href="#produk" onclick="closeMobileMenu()">Produk</a>
+        <a href="#leaderboard" onclick="closeMobileMenu()">Leaderboard</a>
+        <a href="#cara-beli" onclick="closeMobileMenu()">Cara Beli</a>
+        <a href="#bantuan" onclick="closeMobileMenu()">Bantuan</a>
+        <a href="#reseller" onclick="closeMobileMenu()">Reseller</a>
+
+        <a href="https://wa.me/6285797485730" target="_blank">
+            Hubungi CS
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-glow"></div>
+
+    <div class="container">
+
+        <div class="status">
+            <span class="status-dot"></span>
+            SYSTEM ONLINE
+        </div>
+
+        <h1>
+            BUY KEY GAME
+            <br>
+            <span class="gradient">
+                PALING MURAH &amp; AMAN!
+            </span>
+        </h1>
+
+        <p>
+            Pilih produk digital yang kamu butuhkan,
+            tentukan paket 1 Hari, kemudian lanjutkan
+            pesanan langsung melalui WhatsApp RYAN NEWERA.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a
+                href="#produk"
+                class="btn btn-primary">
+                BUY KEY GAME SEKARANG!
+            </a>
+
+            <a
+                href="#cara-beli"
+                class="btn">
+                CARA BELI
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FEATURES
+========================= -->
+
+<section class="container">
+
+    <div class="features">
+
+        <div class="feature">
+            <div class="feature-icon">🛡️</div>
+            <strong>100% AMAN</strong>
+            <span>Transaksi langsung</span>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">⚡</div>
+            <strong>PROSES CEPAT</strong>
+            <span>Order diproses</span>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">💬</div>
+            <strong>24/7 SUPPORT</strong>
+            <span>Fast response</span>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">⭐</div>
+            <strong>TRUSTED</strong>
+            <span>Ribuan pengguna</span>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">💼</div>
+            <strong>RESELLER</strong>
+            <span>Open partnership</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PRODUCT CATALOG
+========================= -->
+
+<section id="produk" class="section container">
+
+    <div class="section-label">
+        CATALOG
+    </div>
+
+    <h2 class="section-title">
+        Produk Terbaru
+    </h2>
+
+    <div class="search-row">
+
+        <div class="search-wrap">
+
+            <input
+                id="searchInput"
+                class="search-input"
+                type="search"
+                autocomplete="off"
+                placeholder="Cari produk...">
+
+            <button
+                id="clearSearch"
+                class="clear-search"
+                onclick="clearSearch()">
+                ×
+            </button>
+
+            <span class="search-icon">
+                ⌕
+            </span>
+
+        </div>
+
+        <select
+            id="sortSelect"
+            class="sort-select">
+
+            <option value="default">
+                TERBARU
+            </option>
+
+            <option value="cheap">
+                TERMURAH
+            </option>
+
+            <option value="expensive">
+                TERMAHAL
+            </option>
+
+            <option value="sold">
+                TERLARIS
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <div class="categories">
+
+        <button
+            class="category-btn active"
+            data-category="ALL">
+            SEMUA
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="FREE FIRE">
+            FREE FIRE
+        </button>
+
+        <button
+            class="category-btn"
+            data-category="8 BALL POOL">
+            8 BALL POOL
+        </button>
+
+    </div>
+
+
+    <div id="products" class="products"></div>
+
+</section>
+
+
+<!-- =========================
+     LEADERBOARD
+========================= -->
+
+<section id="leaderboard" class="section container">
+
+    <div class="section-label">
+        TOP LEADERBOARD
+    </div>
+
+    <h2 class="section-title">
+        Top Pembeli
+    </h2>
+
+    <div class="leader-grid">
+
+        <div class="leader-intro">
+
+            <div class="section-label">
+                MONTHLY
+            </div>
+
+            <h3>
+                Pembeli Teraktif
+            </h3>
+
+            <p>
+                Ranking pembelian bulan ini.
+                Data contoh dapat diganti dengan
+                data backend milikmu.
+            </p>
+
+        </div>
+
+        <div
+            id="leaderList"
+            class="leader-list">
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CARA BELI
+========================= -->
+
+<section id="cara-beli" class="section container">
+
+    <div class="section-label">
+        HOW TO BUY
+    </div>
+
+    <h2 class="section-title">
+        Cara Beli
+    </h2>
+
+    <div class="info-grid">
+
+        <div class="info-card">
+            <div class="info-number">01</div>
+            <strong>Pilih Produk</strong>
+            <span>
+                Cari produk yang kamu inginkan
+                menggunakan search atau kategori.
+            </span>
+        </div>
+
+        <div class="info-card">
+            <div class="info-number">02</div>
+            <strong>Klik Beli</strong>
+            <span>
+                Klik tombol BELI pada produk
+                yang dipilih.
+            </span>
+        </div>
+
+        <div class="info-card">
+            <div class="info-number">03</div>
+            <strong>Pilih 1 Hari</strong>
+            <span>
+                Saat ini katalog dibuat hanya
+                dengan pilihan masa aktif 1 Hari.
+            </span>
+        </div>
+
+        <div class="info-card">
+            <div class="info-number">04</div>
+            <strong>WhatsApp</strong>
+            <span>
+                Pesanan otomatis dibuat lalu
+                diarahkan ke WhatsApp admin.
+            </span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     BANTUAN
+========================= -->
+
+<section id="bantuan" class="section container">
+
+    <div class="section-label">
+        SUPPORT
+    </div>
+
+    <h2 class="section-title">
+        Bantuan
+    </h2>
+
+    <div class="info-card">
+
+        <strong>
+            Butuh bantuan?
+        </strong>
+
+        <span>
+            Hubungi RYAN NEWERA melalui WhatsApp
+            untuk pertanyaan mengenai produk atau pesanan.
+        </span>
+
+        <br><br>
+
+        <a
+            class="btn btn-primary"
+            href="https://wa.me/6285797485730"
+            target="_blank">
+            CHAT WHATSAPP
+        </a>
+
+        <a
+            class="btn"
+            href="https://t.me/ryanxit"
+            target="_blank">
+            TELEGRAM
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     RESELLER
+========================= -->
+
+<section id="reseller" class="section container">
+
+    <div
+        class="info-card"
+        style="text-align:center;padding:28px">
+
+        <div class="section-label">
+            PARTNERSHIP
+        </div>
+
+        <h2 style="
+            margin:7px 0;
+            font-family:'Space Grotesk';
+        ">
+            Open Reseller
+        </h2>
+
+        <span>
+            Hubungi admin untuk informasi kerja sama reseller.
+        </span>
+
+        <br><br>
+
+        <a
+            href="https://wa.me/6285797485730"
+            target="_blank"
+            class="btn btn-primary">
+            HUBUNGI ADMIN
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <div class="brand">
+                    <span class="logo"></span>
+                    RYAN NEWERA
+                </div>
+
+                <p class="footer-description">
+                    Toko digital RYAN NEWERA dengan
+                    katalog produk dan pemesanan
+                    melalui WhatsApp.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <div class="footer-title">
+                    INFORMASI
+                </div>
+
+                <a href="#cara-beli">
+                    Cara Beli
+                </a>
+
+                <a href="#bantuan">
+                    Bantuan / FAQ
+                </a>
+
+                <a href="#reseller">
+                    Kerja Sama
+                </a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <div class="footer-title">
+                    LAYANAN
+                </div>
+
+                <a href="#produk">
+                    Produk
+                </a>
+
+                <a href="#leaderboard">
+                    Leaderboard
+                </a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <div class="footer-title">
+                    KONTAK
+                </div>
+
+                <a
+                    href="https://wa.me/6285797485730"
+                    target="_blank">
+                    WhatsApp
+                </a>
+
+                <a
+                    href="https://t.me/ryanxit"
+                    target="_blank">
+                    Telegram
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 RYAN NEWERA. All rights reserved.
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     FLOATING CONTACT
+========================= -->
+
+<a
+    href="https://wa.me/6285797485730"
+    target="_blank"
+    class="floating-contact">
+    WA
+</a>
+
+
+<!-- =========================
+     BUY MODAL
+========================= -->
+
+<div
+    id="buyModal"
+    class="modal-backdrop">
+
+    <div class="modal">
+
+        <div class="modal-header">
+
+            <div class="modal-title">
+                Pilih Produk
+            </div>
+
+            <button
+                class="modal-close"
+                onclick="closeModal()">
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="modal-body">
+
+            <div class="selected">
+
+                <div
+                    id="selectedIcon"
+                    class="selected-icon">
+                    RN
+                </div>
+
+                <div class="selected-info">
+
+                    <div
+                        id="selectedName"
+                        class="selected-name">
+                        -
+                    </div>
+
+                    <div
+                        id="selectedMeta"
+                        class="selected-meta">
+                        -
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-label">
+                MASA AKTIF
+            </div>
+
+
+            <!--
+                HANYA 1 HARI.
+                3 / 7 / 15 / 30 HARI DAN LIFETIME
+                MEMANG TIDAK DITAMPILKAN.
+            -->
+
+            <button class="duration">
+
+                <strong>
+                    1 Hari
+                </strong>
+
+                <span
+                    id="selectedPrice"
+                    class="duration-price">
+                    Rp 0
+                </span>
+
+                <span class="duration-desc">
+                    Masa aktif 1 hari
+                </span>
+
+            </button>
+
+
+            <button
+                class="whatsapp-order"
+                onclick="orderViaWhatsApp()">
+
+                BELI VIA WHATSAPP
+
+            </button>
+
+
+            <div class="modal-note">
+                Tombol ini hanya membuat pesan order
+                dan mengarahkan pembeli ke WhatsApp.
+                Status pembayaran tidak dipalsukan oleh website.
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- TOAST -->
+
+<div id="toast" class="toast"></div>
+
+
+<script>
+
+/* =====================================================
+   KATALOG
+   DATA MENGIKUTI HARGA YANG TAMPIL DI REFERENSI
+   HANYA PAKET 1 HARI DI UI RYAN NEWERA
+===================================================== */
+
+const products = [
+
+    {
+        id:1,
+        name:"DRIP CLIENT",
+        category:"FREE FIRE",
+        platform:"ANDROID",
+        status:"Offline",
+        price:10000,
+        sold:"89"
+    },
+
+    {
+        id:2,
+        name:"DRIP PROXY",
+        category:"FREE FIRE",
+        platform:"ANDROID",
+        status:"Offline",
+        price:10000,
+        sold:"29"
+    },
+
+    {
+        id:3,
+        name:"HG CHEAT",
+        category:"FREE FIRE",
+        platform:"ANDROID",
+        status:"Online",
+        price:10000,
+        sold:"112"
+    },
+
+    {
+        id:4,
+        name:"PRIME HOOK",
+        category:"FREE FIRE",
+        platform:"ANDROID",
+        status:"Unknown",
+        price:8000,
+        sold:"20"
+    },
+
+    {
+        id:5,
+        name:"FLUORITE IOS FF",
+        category:"FREE FIRE",
+        platform:"iOS",
+        status:"Offline",
+        price:50000,
+        sold:"2.1K"
+    },
+
+    {
+        id:6,
+        name:"GBOX",
+        category:"FREE FIRE",
+        platform:"iOS",
+        status:"Online",
+        price:100000,
+        sold:"3"
+    },
+
+    {
+        id:7,
+        name:"MIGUL IOS PRO",
+        category:"FREE FIRE",
+        platform:"iOS",
+        status:"Offline",
+        price:45000,
+        sold:"7"
+    },
+
+    {
+        id:8,
+        name:"MIGUL LITE",
+        category:"FREE FIRE",
+        platform:"iOS",
+        status:"Offline",
+        price:40000,
+        sold:"1"
+    },
+
+    {
+        id:9,
+        name:"PATO ORANGE",
+        category:"8 BALL POOL",
+        platform:"-",
+        status:"Online",
+        price:35000,
+        sold:"5"
+    },
+
+    {
+        id:10,
+        name:"PATO BLUE",
+        category:"8 BALL POOL",
+        platform:"-",
+        status:"Online",
+        price:25000,
+        sold:"5"
+    },
+
+    {
+        id:11,
+        name:"BR MODS ROOT",
+        category:"FREE FIRE",
+        platform:"-",
+        status:"Unknown",
+        price:12000,
+        sold:"2.6K"
+    },
+
+    {
+        id:12,
+        name:"BR MODS PC",
+        category:"FREE FIRE",
+        platform:"-",
+        status:"Unknown",
+        price:16000,
+        sold:"4.5K"
+    },
+
+    {
+        id:13,
+        name:"SILENT CHEAT",
+        category:"FREE FIRE",
+        platform:"ANDROID",
+        status:"Online",
+        price:13000,
+        sold:"17"
+    },
+
+    {
+        id:14,
+        name:"HG PROXY",
+        category:"FREE FIRE",
+        platform:"ANDROID",
+        status:"Online",
+        price:13000,
+        sold:"13"
+    },
+
+    {
+        id:15,
+        name:"PLUGIN ALL GAME",
+        category:"FREE FIRE",
+        platform:"ANDROID",
+        status:"Online",
+        price:25000,
+        sold:"1"
+    },
+
+    {
+        id:16,
+        name:"BALA MODS",
+        category:"FREE FIRE",
+        platform:"ANDROID",
+        status:"Online",
+        price:4000,
+        sold:"7"
+    },
+
+    {
+        id:17,
+        name:"PROXY IOS",
+        category:"FREE FIRE",
+        platform:"iOS",
+        status:"Online",
+        price:35000,
+        sold:"3"
+    },
+
+    {
+        id:18,
+        name:"ABCD PROXY",
+        category:"FREE FIRE",
+        platform:"ANDROID",
+        status:"Online",
+        price:7000,
+        sold:"1.9K"
+    },
+
+    {
+        id:19,
+        name:"HG PROXY PRIME",
+        category:"FREE FIRE",
+        platform:"ANDROID",
+        status:"Online",
+        price:13000,
+        sold:"1"
+    }
+
+];
+
+
+/* =========================
+   STATE
+========================= */
+
+let currentCategory = "ALL";
+let selectedProduct = null;
+
+
+/* =========================
+   RUPIAH
+========================= */
+
+function rupiah(value){
+
+    return new Intl.NumberFormat(
+        "id-ID",
+        {
+            style:"currency",
+            currency:"IDR",
+            maximumFractionDigits:0
+        }
+    ).format(value);
+
+}
+
+
+/* =========================
+   INITIAL
+========================= */
+
+function initials(name){
+
+    return name
+        .split(" ")
+        .map(word => word[0])
+        .join("")
+        .slice(0,3)
+        .toUpperCase();
+
+}
+
+
+/* =========================
+   STATUS CLASS
+========================= */
+
+function statusClass(status){
+
+    if(status === "Online"){
+        return "status-online";
+    }
+
+    if(status === "Offline"){
+        return "status-offline";
+    }
+
+    return "status-unknown";
+
+}
+
+
+/* =========================
+   RENDER PRODUCTS
+========================= */
+
+function renderProducts(){
+
+    const search =
+        document
+        .getElementById("searchInput")
+        .value
+        .trim()
+        .toLowerCase();
+
+    const sort =
+        document
+        .getElementById("sortSelect")
+        .value;
+
+
+    let filtered = products.filter(product => {
+
+        const categoryMatch =
+            currentCategory === "ALL" ||
+            product.category === currentCategory;
+
+        const searchMatch =
+            !search ||
+            product.name
+                .toLowerCase()
+                .includes(search) ||
+            product.category
+                .toLowerCase()
+                .includes(search) ||
+            product.platform
+                .toLowerCase()
+                .includes(search);
+
+        return categoryMatch && searchMatch;
+
+    });
+
+
+    if(sort === "cheap"){
+
+        filtered.sort(
+            (a,b) => a.price - b.price
+        );
+
+    }
+
+    else if(sort === "expensive"){
+
+        filtered.sort(
+            (a,b) => b.price - a.price
+        );
+
+    }
+
+    else if(sort === "sold"){
+
+        filtered.sort(
+            (a,b) => soldNumber(b.sold) - soldNumber(a.sold)
+        );
+
+    }
+
+
+    const productsContainer =
+        document.getElementById("products");
+
+
+    if(filtered.length === 0){
+
+        productsContainer.innerHTML = `
+
+            <div class="empty">
+
+                <div class="empty-icon">
+                    🔎
+                </div>
+
+                <strong>
+                    Produk tidak ditemukan
+                </strong>
+
+                <span>
+                    Coba gunakan kata pencarian lain.
+                </span>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    productsContainer.innerHTML =
+        filtered
+        .map(product => productHTML(product))
+        .join("");
+
+}
+
+
+/* =========================
+   SOLD NUMBER
+========================= */
+
+function soldNumber(value){
+
+    const text =
+        String(value)
+        .toUpperCase();
+
+    if(text.includes("K")){
+
+        return parseFloat(text) * 1000;
+
+    }
+
+    return parseFloat(text) || 0;
+
+}
+
+
+/* =========================
+   PRODUCT HTML
+========================= */
+
+function productHTML(product){
+
+    return `
+
+        <article class="product">
+
+            <div class="product-image">
+
+                <div class="platform-badge">
+                    ${product.platform}
+                </div>
+
+                <div class="
+                    status-badge
+                    ${statusClass(product.status)}
+                ">
+                    ${product.status}
+                </div>
+
+                <div class="product-initial">
+                    ${initials(product.name)}
+                </div>
+
+            </div>
+
+
+            <div class="product-body">
+
+                <div class="product-meta">
+
+                    <span>
+                        ${product.category}
+                    </span>
+
+                    <span>
+                        Terjual ${product.sold}
+                    </span>
+
+                </div>
+
+
+                <div class="product-name">
+                    ${product.name}
+                </div>
+
+
+                <div class="product-price">
+
+                    ${rupiah(product.price)}
+
+                    <small>
+                        / 1 Hari
+                    </small>
+
+                </div>
+
+
+                <button
+                    class="buy-btn"
+                    onclick="openBuyModal(${product.id})">
+
+                    BELI
+
+                </button>
+
+            </div>
+
+        </article>
+
+    `;
+
+}
+
+
+/* =========================
+   OPEN BUY MODAL
+========================= */
+
+function openBuyModal(id){
+
+    selectedProduct =
+        products.find(
+            product => product.id === id
+        );
+
+
+    if(!selectedProduct){
+        return;
+    }
+
+
+    document
+        .getElementById("selectedIcon")
+        .textContent =
+        initials(selectedProduct.name);
+
+
+    document
+        .getElementById("selectedName")
+        .textContent =
+        selectedProduct.name;
+
+
+    document
+        .getElementById("selectedMeta")
+        .textContent =
+        `${selectedProduct.category} • ${selectedProduct.platform}`;
+
+
+    document
+        .getElementById("selectedPrice")
+        .textContent =
+        rupiah(selectedProduct.price);
+
+
+    document
+        .getElementById("buyModal")
+        .classList.add("show");
+
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+/* =========================
+   CLOSE MODAL
+========================= */
+
+function closeModal(){
+
+    document
+        .getElementById("buyModal")
+        .classList.remove("show");
+
+
+    document.body.style.overflow = "";
+
+}
+
+
+/* =========================
+   WHATSAPP ORDER
+========================= */
+
+function orderViaWhatsApp(){
+
+    if(!selectedProduct){
+        return;
+    }
+
+
+    const orderId =
+        "RN-" +
+        Date.now()
+        .toString()
+        .slice(-8);
+
+
+    const message =
+
+`Halo RYAN NEWERA,
+
+Saya ingin membeli:
+
+Produk: ${selectedProduct.name}
+Kategori: ${selectedProduct.category}
+Platform: ${selectedProduct.platform}
+Durasi: 1 Hari
+Harga: ${rupiah(selectedProduct.price)}
+
+Order ID: ${orderId}
+
+Mohon diproses.
+
+Terima kasih.`;
+
+
+    const whatsappUrl =
+        "https://wa.me/6285797485730?text=" +
+        encodeURIComponent(message);
+
+
+    window.open(
+        whatsappUrl,
+        "_blank"
+    );
+
+
+    closeModal();
+
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+document
+    .getElementById("searchInput")
+    .addEventListener(
+        "input",
+        function(){
+
+            const clear =
+                document.getElementById("clearSearch");
+
+            clear.style.display =
+                this.value ? "block" : "none";
+
+            renderProducts();
+
+        }
+    );
+
+
+/* =========================
+   CLEAR SEARCH
+========================= */
+
+function clearSearch(){
+
+    const input =
+        document.getElementById("searchInput");
+
+
+    input.value = "";
+
+    document
+        .getElementById("clearSearch")
+        .style.display = "none";
+
+
+    renderProducts();
+
+    input.focus();
+
+}
+
+
+/* =========================
+   SORT
+========================= */
+
+document
+    .getElementById("sortSelect")
+    .addEventListener(
+        "change",
+        renderProducts
+    );
+
+
+/* =========================
+   CATEGORY
+========================= */
+
+document
+    .querySelectorAll(".category-btn")
+    .forEach(button => {
+
+        button.addEventListener(
+            "click",
+            function(){
+
+                document
+                    .querySelectorAll(".category-btn")
+                    .forEach(btn => {
+                        btn.classList.remove("active");
+                    });
+
+
+                this.classList.add("active");
+
+
+                currentCategory =
+                    this.dataset.category;
+
+
+                renderProducts();
+
+            }
+        );
+
+    });
+
+
+/* =========================
+   LEADERBOARD
+========================= */
+
+const leaderboard = [
+
+    {
+        initials:"PA",
+        name:"Parji",
+        total:243000
+    },
+
+    {
+        initials:"US",
+        name:"User",
+        total:188350
+    },
+
+    {
+        initials:"GA",
+        name:"galang152hz",
+        total:138000
+    },
+
+    {
+        initials:"RA",
+        name:"Ramon",
+        total:108000
+    },
+
+    {
+        initials:"EM",
+        name:"Emsde",
+        total:49100
+    },
+
+    {
+        initials:"JA",
+        name:"japar",
+        total:105000
+    },
+
+    {
+        initials:"LU",
+        name:"LUTFIVANGUARD",
+        total:98850
+    },
+
+    {
+        initials:"GU",
+        name:"Guru",
+        total:86000
+    }
+
+];
+
+
+function renderLeaderboard(){
+
+    document
+        .getElementById("leaderList")
+        .innerHTML =
+
+        leaderboard
+        .map(
+            (user,index) => `
+
+                <div class="leader-item">
+
+                    <div class="rank">
+                        #${index + 1}
+                    </div>
+
+                    <div class="avatar">
+                        ${user.initials}
+                    </div>
+
+                    <div class="leader-info">
+
+                        <strong>
+                            ${user.name}
+                        </strong>
+
+                        <span>
+                            Pembeli aktif
+                        </span>
+
+                    </div>
+
+                    <div class="leader-total">
+                        ${rupiah(user.total)}
+                    </div>
+
+                </div>
+
+            `
+        )
+        .join("");
+
+}
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+function toggleMobileMenu(){
+
+    document
+        .getElementById("mobileMenu")
+        .classList.toggle("active");
+
+}
+
+
+function closeMobileMenu(){
+
+    document
+        .getElementById("mobileMenu")
+        .classList.remove("active");
+
+}
+
+
+/* =========================
+   TOAST
+========================= */
+
+function showToast(message){
+
+    const toast =
+        document.getElementById("toast");
+
+
+    toast.textContent =
+        message;
+
+
+    toast.classList.add("show");
+
+
+    setTimeout(
+        () => {
+            toast.classList.remove("show");
+        },
+        2300
+    );
+
+}
+
+
+/* =========================
+   CLOSE MODAL OUTSIDE
+========================= */
+
+document
+    .getElementById("buyModal")
+    .addEventListener(
+        "click",
+        function(event){
+
+            if(event.target === this){
+
+                closeModal();
+
+            }
+
+        }
+    );
+
+
+/* =========================
+   ESC CLOSE
+========================= */
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if(event.key === "Escape"){
+
+            closeModal();
+            closeMobileMenu();
+
+        }
+
+    }
+);
+
+
+/* =========================
+   INIT
+========================= */
+
+renderProducts();
+renderLeaderboard();
+
+</script>
+
+</body>
+</html>
